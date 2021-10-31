@@ -13,10 +13,15 @@ export function hello(_options: Schema): Rule {
     const sourceParametrizedTemplates = apply(sourceTemplates, [
       template({
         ..._options,
-        ...strings
+        ...strings,
+        addExclamation
       })
     ]);
 
     return mergeWith(sourceParametrizedTemplates);
   };
+}
+
+function addExclamation(value: string): string {
+  return `${value}!`;
 }

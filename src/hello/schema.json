@@ -7,12 +7,16 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "The name of the person",
+      "description": "The name of the interface",
       "$default": {
         "$source": "argv",
         "index": 0
       },
-      "x-prompt": "Who do you want to greet?"
+      "x-prompt": "What is your interface name?"
+    },
+    "transform": {
+      "type": "boolean",
+      "default": false
     }
   },
   "required": [ "name" ]

@@ -17,6 +17,12 @@
     "transform": {
       "type": "boolean",
       "default": false
+    },
+    "project": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
     }
   },
   "required": [ "name" ]
